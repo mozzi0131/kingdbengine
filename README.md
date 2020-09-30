@@ -27,6 +27,7 @@ Always welcome for the better repository name
 7. Map 시스템 관리
 8. 키보드 입력 지원 및 키 변경 가능하도록 지원
 9. 세이브 / 로드 기능 제공(Slot 3개)
+10. 엔진은 동적 라이브러리 형태로 제공되어, 실제 게임을 구현할 때 유연하게 가져다 쓸 수 있어야 함
 
 ### To Do
 
