@@ -1,4 +1,6 @@
 project('kingdbengine', 'cpp')
 
-subdir('rawobject')
-subdir('gameobj')
+subdir('Basic')
+subdir('Modules')
+subdir('Platform')
+subdir('tests')
