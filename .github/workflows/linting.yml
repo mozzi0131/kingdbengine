@@ -19,7 +19,7 @@ jobs:
     - uses: actions/checkout@v2
     - uses: DoozyX/clang-format-lint-action@v0.11
       with:
-        source: ['Basic/*', 'Modules/Audio*', 'Modules/Events/*', 'Modules/Objects/*']
+        source: 'Basic/*', 'Modules/Audio*', 'Modules/Events/*', 'Modules/Objects/*'
         extensions: 'h,cpp'
         clangFormatVersion: 11
         style: google
