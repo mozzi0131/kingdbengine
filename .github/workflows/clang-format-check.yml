@@ -1,5 +1,9 @@
 name: clang-format Check
+<<<<<<< HEAD
 on: [push, pull_request]
+=======
+on: [push, PR]
+>>>>>>> 56e93b8... add few actions
 jobs:
   formatting-check:
     name: Formatting Check
