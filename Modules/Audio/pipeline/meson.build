@@ -1,15 +1,12 @@
-subdir('pipeline')
-
 audio_inc = include_directories('.')
 
 audio_headers = [
-  'audiomanager.h',
-  'audioobject.h'
+  'pipeline.h'
 ]
 
 audio_sources = [
-  'audiomanager.cpp',
-  'audioobject.cpp'
+  'pipeline.cpp',
+  'bgmpipeline.cpp',
 ]
 
 gst_version = '1.14.4'
@@ -34,7 +31,7 @@ gstbase_dep = dependency('gstreamer-base-' + gst_apiversion, version : gst_req,
   fallback : ['gstreamer', 'gst_base_dep'])
 
 # declare dep
-kingdbaudio = shared_library('kingdbaudio',
+pipeline = shared_library('audiopipeline',
   audio_sources,
   include_directories : [audio_inc],
   version : libversion,
@@ -43,7 +40,7 @@ kingdbaudio = shared_library('kingdbaudio',
   dependencies : [gst_dep, gstbase_dep],
 )
 
-kingdbaudio_dep = declare_dependency(link_with : kingdbaudio,
+pipeline_dep = declare_dependency(link_with : pipeline,
   include_directories : [audio_inc],
   dependencies : [gst_dep, gstbase_dep],
   sources : audio_sources
