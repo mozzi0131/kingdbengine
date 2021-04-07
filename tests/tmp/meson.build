@@ -1,7 +1,7 @@
 audioinc = include_directories('../../Modules/Audio')
 pipelineinc = include_directories('../../Modules/Audio/pipeline')
 
-tmpsrc = ['audiotest.cpp']
+tmpsrc = ['effecttest.cpp']
 
 testexe = executable(
   'kingdbtest', tmpsrc,
